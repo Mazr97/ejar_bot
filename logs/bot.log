@@ -1,0 +1,311 @@
+2025-06-18 02:17:35,342 - INFO - main.<module>():5 - main.py started
+2025-06-18 02:17:35,342 - INFO - bot.run_bot():29 - Starting the bot...
+2025-06-18 02:17:35,342 - DEBUG - bot.register_handlers():21 - Registering handlers...
+2025-06-18 02:48:16,493 - INFO - agent.<module>():18 - System prompt loaded successfully.
+2025-06-18 02:48:16,535 - INFO - main.<module>():5 - main.py started
+2025-06-18 02:48:16,535 - INFO - bot.run_bot():30 - Starting the bot...
+2025-06-18 02:48:16,535 - DEBUG - bot.register_handlers():24 - Registering handlers...
+2025-06-18 02:48:22,526 - INFO - start_handler.start():15 - User 1293763520 started the bot.
+2025-06-18 02:48:31,982 - INFO - message_handler.handle_user_message():13 - Received message from user 1293763520: اهلا
+2025-06-18 02:48:32,040 - INFO - agent.ask_claude():33 - Sending message history to Claude AI for user 1293763520 with 1 messages.
+2025-06-18 02:48:43,521 - INFO - message_handler.handle_user_message():13 - Received message from user 1293763520: ماذا يكن ان تفعل ؟
+2025-06-18 02:48:43,610 - INFO - agent.ask_claude():33 - Sending message history to Claude AI for user 1293763520 with 3 messages.
+2025-06-23 16:21:10,002 - INFO - agent.<module>():16 - System prompt loaded successfully.
+2025-06-23 16:21:10,046 - INFO - main.<module>():5 - main.py started
+2025-06-23 16:21:10,046 - INFO - bot.run_bot():30 - Starting the bot...
+2025-06-23 16:21:10,046 - DEBUG - bot.register_handlers():24 - Registering handlers...
+2025-06-23 16:21:41,695 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): سلام عليكم
+2025-06-23 16:21:42,004 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 5 messages.
+2025-06-23 16:21:54,178 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): وش تسوي انت ؟
+2025-06-23 16:21:54,269 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 7 messages.
+2025-06-23 16:22:32,759 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): تمام بسجل عقد وش احتاج
+2025-06-23 16:22:32,866 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 9 messages.
+2025-07-02 23:14:00,591 - INFO - agent.<module>():16 - System prompt loaded successfully.
+2025-07-02 23:14:00,634 - INFO - main.<module>():5 - main.py started
+2025-07-02 23:14:00,634 - INFO - bot.run_bot():30 - Starting the bot...
+2025-07-02 23:14:00,634 - DEBUG - bot.register_handlers():24 - Registering handlers...
+2025-07-02 23:14:11,615 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): هلا
+2025-07-02 23:14:11,994 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 11 messages.
+2025-07-02 23:16:49,394 - INFO - agent.<module>():16 - System prompt loaded successfully.
+2025-07-02 23:16:49,436 - INFO - main.<module>():5 - main.py started
+2025-07-02 23:16:49,436 - INFO - bot.run_bot():30 - Starting the bot...
+2025-07-02 23:16:49,436 - DEBUG - bot.register_handlers():24 - Registering handlers...
+2025-07-02 23:16:58,491 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): مرحبا
+2025-07-02 23:16:58,970 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 13 messages.
+2025-07-02 23:17:22,908 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): سكني
+2025-07-02 23:17:23,026 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 15 messages.
+2025-07-02 23:17:59,804 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): انا مالك عطني المعلومات اللي احتاج ادخله مره وحدة وارسلها لك
+2025-07-02 23:17:59,920 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 17 messages.
+2025-07-02 23:19:21,311 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): ما سألتني عن المستأجر ؟
+2025-07-02 23:19:21,636 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 19 messages.
+2025-07-03 17:30:54,217 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): هلا
+2025-07-03 17:30:54,356 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 21 messages.
+2025-07-03 17:31:26,430 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): السلام عليكم بسوي عقد
+2025-07-03 17:31:26,531 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 23 messages.
+2025-07-03 17:31:54,970 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): المالك
+2025-07-03 17:31:55,098 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 25 messages.
+2025-07-03 17:32:22,240 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): كيف الحاا
+2025-07-03 17:32:22,375 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 27 messages.
+2025-07-03 17:32:31,841 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): كيف الحال
+2025-07-03 17:32:31,974 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 29 messages.
+2025-07-03 17:32:54,468 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): انت غبي
+2025-07-03 17:32:54,579 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 31 messages.
+2025-07-03 17:33:17,843 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): اقولك انت غبي ما تفهم
+2025-07-03 17:33:17,945 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 33 messages.
+2025-07-05 01:01:36,627 - INFO - agent.<module>():16 - System prompt loaded successfully.
+2025-07-05 01:01:36,671 - INFO - main.<module>():5 - main.py started
+2025-07-05 01:01:36,671 - INFO - bot.run_bot():30 - Starting the bot...
+2025-07-05 01:01:36,671 - DEBUG - bot.register_handlers():24 - Registering handlers...
+2025-07-05 01:01:37,589 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): هلا
+2025-07-05 01:01:38,107 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 35 messages.
+2025-07-05 01:01:44,053 - INFO - start_handler.start():15 - User 1293763520 started the bot.
+2025-07-05 01:02:13,422 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): ايوا ابيك تسوي لي عقد ايجار
+2025-07-05 01:02:13,597 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 37 messages.
+2025-07-05 01:02:44,898 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): بعدها ؟
+2025-07-05 01:02:45,052 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 39 messages.
+2025-07-05 01:03:23,451 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): وش كل المعلومات اللي تحتاجها ؟
+2025-07-05 01:03:23,569 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 41 messages.
+2025-07-05 01:59:08,989 - INFO - start_handler.start():15 - User 1293763520 started the bot.
+2025-07-05 01:59:16,838 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): ابي اسوي عقد
+2025-07-05 01:59:16,986 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 1 messages.
+2025-07-05 01:59:36,046 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): ايوا
+2025-07-05 01:59:36,140 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 1 messages.
+2025-07-05 01:59:43,997 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): ايوا
+2025-07-05 01:59:44,104 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 1 messages.
+2025-07-05 02:04:49,568 - INFO - agent.<module>():16 - System prompt loaded successfully.
+2025-07-05 02:04:49,613 - INFO - main.<module>():5 - main.py started
+2025-07-05 02:04:49,613 - INFO - bot.run_bot():30 - Starting the bot...
+2025-07-05 02:04:49,613 - DEBUG - bot.register_handlers():24 - Registering handlers...
+2025-07-05 02:04:56,790 - INFO - start_handler.start():15 - User 1293763520 started the bot.
+2025-07-05 02:05:01,460 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): هلا
+2025-07-05 02:05:01,517 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 1 messages.
+2025-07-05 02:05:22,639 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): ايوا
+2025-07-05 02:05:22,780 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 3 messages.
+2025-07-05 02:05:30,687 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): سكني
+2025-07-05 02:05:30,777 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 5 messages.
+2025-07-05 02:05:50,462 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): وش الفرق بينهم ؟
+2025-07-05 02:05:50,554 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 7 messages.
+2025-07-05 02:19:57,659 - INFO - agent.<module>():16 - System prompt loaded successfully.
+2025-07-05 02:19:57,703 - INFO - main.<module>():5 - main.py started
+2025-07-05 02:19:57,703 - INFO - bot.run_bot():30 - Starting the bot...
+2025-07-05 02:19:57,703 - DEBUG - bot.register_handlers():24 - Registering handlers...
+2025-07-05 02:20:43,068 - INFO - start_handler.start():15 - User 1293763520 started the bot.
+2025-07-05 02:20:48,415 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): هلا ابي اسوي عقج
+2025-07-05 02:20:48,520 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 1 messages.
+2025-07-05 02:20:59,702 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): سكني
+2025-07-05 02:20:59,861 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 1 messages.
+2025-07-05 02:36:16,997 - INFO - agent.<module>():16 - System prompt loaded successfully.
+2025-07-05 02:36:17,041 - INFO - main.<module>():5 - main.py started
+2025-07-05 02:36:17,041 - INFO - bot.run_bot():30 - Starting the bot...
+2025-07-05 02:36:17,041 - DEBUG - bot.register_handlers():24 - Registering handlers...
+2025-07-05 02:36:18,120 - INFO - start_handler.start():15 - User 1293763520 started the bot.
+2025-07-05 02:36:23,807 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): ابي اسوي عقد
+2025-07-05 02:36:23,907 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 1 messages.
+2025-07-05 02:36:33,722 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): ايوا
+2025-07-05 02:36:33,835 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 1 messages.
+2025-07-05 02:36:41,046 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): سكني
+2025-07-05 02:36:41,146 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 1 messages.
+2025-07-05 02:36:52,631 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): مدري وش الفرق بينهم
+2025-07-05 02:36:52,786 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 1 messages.
+2025-07-05 02:37:11,400 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): صك الكتروني
+2025-07-05 02:37:11,503 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 1 messages.
+2025-07-05 02:38:39,053 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): ابيك ترسل المعلومات مره وحدة
+2025-07-05 02:38:39,155 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 1 messages.
+2025-07-05 02:38:54,699 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): وش المعلومات اللي تبيها
+2025-07-05 02:38:54,798 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 1 messages.
+2025-07-05 04:40:59,204 - INFO - start_handler.start():15 - User 5739325840 started the bot.
+2025-07-05 04:41:24,881 - INFO - message_handler.handle_user_message():20 - 📩 Message received from محمد (5739325840): 4
+2025-07-05 04:41:24,952 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 5739325840 with 1 messages.
+2025-07-05 22:19:17,848 - INFO - agent.<module>():16 - System prompt loaded successfully.
+2025-07-05 22:19:17,891 - INFO - main.<module>():5 - main.py started
+2025-07-05 22:19:17,891 - INFO - bot.run_bot():30 - Starting the bot...
+2025-07-05 22:19:17,891 - DEBUG - bot.register_handlers():24 - Registering handlers...
+2025-07-05 22:21:25,462 - INFO - start_handler.start():15 - User 1293763520 started the bot.
+2025-07-05 22:21:34,754 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): ابي اسوي عقد
+2025-07-05 22:21:34,891 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 1 messages.
+2025-07-05 22:26:39,381 - INFO - agent.<module>():16 - System prompt loaded successfully.
+2025-07-05 22:26:39,424 - INFO - main.<module>():5 - main.py started
+2025-07-05 22:26:39,424 - INFO - bot.run_bot():30 - Starting the bot...
+2025-07-05 22:26:39,424 - DEBUG - bot.register_handlers():24 - Registering handlers...
+2025-07-05 22:26:41,946 - INFO - start_handler.start():15 - User 1293763520 started the bot.
+2025-07-05 22:26:50,469 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): ابي اسوي عقد ايجار
+2025-07-05 22:26:50,558 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 1 messages.
+2025-07-05 22:48:22,912 - INFO - agent.<module>():16 - System prompt loaded successfully.
+2025-07-05 22:48:22,957 - INFO - main.<module>():5 - main.py started
+2025-07-05 22:48:22,958 - INFO - bot.run_bot():30 - Starting the bot...
+2025-07-05 22:48:22,958 - DEBUG - bot.register_handlers():24 - Registering handlers...
+2025-07-05 22:49:15,478 - INFO - agent.<module>():16 - System prompt loaded successfully.
+2025-07-05 22:49:15,518 - INFO - main.<module>():5 - main.py started
+2025-07-05 22:49:15,518 - INFO - bot.run_bot():30 - Starting the bot...
+2025-07-05 22:49:15,518 - DEBUG - bot.register_handlers():24 - Registering handlers...
+2025-07-05 22:49:35,332 - INFO - start_handler.start():15 - User 1293763520 started the bot.
+2025-07-05 22:49:44,372 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): سلام عليكم
+2025-07-05 22:49:44,482 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 1 messages.
+2025-07-05 22:49:59,062 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): نعم
+2025-07-05 22:49:59,163 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 1 messages.
+2025-07-05 22:50:15,432 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): سكني
+2025-07-05 22:50:15,529 - INFO - agent.ask_claude():31 - Sending message history to Claude AI for user 1293763520 with 1 messages.
+2025-07-05 23:11:35,336 - INFO - agent.<module>():16 - System prompt loaded successfully.
+2025-07-05 23:11:35,362 - INFO - main.<module>():5 - main.py started
+2025-07-05 23:11:35,362 - INFO - bot.run_bot():30 - Starting the bot...
+2025-07-05 23:11:35,362 - DEBUG - bot.register_handlers():24 - Registering handlers...
+2025-07-05 23:12:12,846 - INFO - start_handler.start():15 - User 1293763520 started the bot.
+2025-07-05 23:12:23,632 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): اهلا ابي اسوي عقد
+2025-07-05 23:12:23,721 - INFO - agent.ask_ai():41 - Sending message history to AI for user 1293763520 with 1 messages.
+2025-07-05 23:12:39,802 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): سكني
+2025-07-05 23:12:39,895 - INFO - agent.ask_ai():41 - Sending message history to AI for user 1293763520 with 1 messages.
+2025-07-05 23:17:15,228 - INFO - agent.<module>():16 - System prompt loaded successfully.
+2025-07-05 23:17:15,253 - INFO - main.<module>():5 - main.py started
+2025-07-05 23:17:15,253 - INFO - bot.run_bot():30 - Starting the bot...
+2025-07-05 23:17:15,253 - DEBUG - bot.register_handlers():24 - Registering handlers...
+2025-07-05 23:17:16,701 - INFO - start_handler.start():15 - User 1293763520 started the bot.
+2025-07-05 23:17:21,332 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): ابي اسوي عقد
+2025-07-05 23:17:21,488 - INFO - agent.ask_ai():41 - Sending message history to AI for user 1293763520 with 1 messages.
+2025-07-05 23:17:31,219 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): سكني
+2025-07-05 23:17:31,319 - INFO - agent.ask_ai():41 - Sending message history to AI for user 1293763520 with 1 messages.
+2025-07-05 23:17:46,745 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): سكني
+2025-07-05 23:17:47,012 - INFO - agent.ask_ai():41 - Sending message history to AI for user 1293763520 with 1 messages.
+2025-07-05 23:21:23,830 - INFO - agent.<module>():16 - System prompt loaded successfully.
+2025-07-05 23:21:23,854 - INFO - main.<module>():5 - main.py started
+2025-07-05 23:21:23,854 - INFO - bot.run_bot():30 - Starting the bot...
+2025-07-05 23:21:23,854 - DEBUG - bot.register_handlers():24 - Registering handlers...
+2025-07-05 23:21:25,975 - INFO - start_handler.start():15 - User 1293763520 started the bot.
+2025-07-05 23:21:36,719 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): ابي اسوي عقد سكني
+2025-07-05 23:21:36,785 - INFO - agent.ask_ai():41 - Sending message history to AI for user 1293763520 with 1 messages.
+2025-07-05 23:21:47,408 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): صك الكتروني
+2025-07-05 23:21:47,499 - INFO - agent.ask_ai():41 - Sending message history to AI for user 1293763520 with 3 messages.
+2025-07-07 16:13:18,163 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): هلا
+2025-07-07 16:13:18,264 - INFO - agent.ask_ai():41 - Sending message history to AI for user 1293763520 with 5 messages.
+2025-07-07 16:21:45,211 - INFO - start_handler.start():15 - User 692511574 started the bot.
+2025-07-07 16:21:57,754 - INFO - message_handler.handle_user_message():20 - 📩 Message received from T (692511574): السلام عليكم بغيت عقد ايجار
+2025-07-07 16:21:57,826 - INFO - agent.ask_ai():41 - Sending message history to AI for user 692511574 with 1 messages.
+2025-07-07 16:23:36,661 - INFO - message_handler.handle_user_message():20 - 📩 Message received from T (692511574): كيف حالك
+2025-07-07 16:23:36,780 - INFO - agent.ask_ai():41 - Sending message history to AI for user 692511574 with 3 messages.
+2025-07-07 16:23:46,514 - INFO - message_handler.handle_user_message():20 - 📩 Message received from T (692511574): وش تسوي بيومك
+2025-07-07 16:23:46,617 - INFO - agent.ask_ai():41 - Sending message history to AI for user 692511574 with 5 messages.
+2025-07-07 16:23:57,865 - INFO - message_handler.handle_user_message():20 - 📩 Message received from T (692511574): ابي اسولف معك
+2025-07-07 16:23:57,961 - INFO - agent.ask_ai():41 - Sending message history to AI for user 692511574 with 7 messages.
+2025-07-07 16:24:30,928 - INFO - message_handler.handle_user_message():20 - 📩 Message received from T (692511574): اخبارك
+2025-07-07 16:24:31,026 - INFO - agent.ask_ai():41 - Sending message history to AI for user 692511574 with 9 messages.
+2025-07-07 16:25:01,350 - INFO - message_handler.handle_user_message():20 - 📩 Message received from T (692511574): ابي اتعرف عليك
+2025-07-07 16:25:01,446 - INFO - agent.ask_ai():41 - Sending message history to AI for user 692511574 with 11 messages.
+2025-07-07 16:25:37,034 - INFO - message_handler.handle_user_message():20 - 📩 Message received from T (692511574): لا
+2025-07-07 16:25:37,133 - INFO - agent.ask_ai():41 - Sending message history to AI for user 692511574 with 13 messages.
+2025-07-07 16:26:06,834 - INFO - message_handler.handle_user_message():20 - 📩 Message received from T (692511574): كم عمرك
+2025-07-07 16:26:06,930 - INFO - agent.ask_ai():41 - Sending message history to AI for user 692511574 with 15 messages.
+2025-07-07 16:26:38,990 - INFO - message_handler.handle_user_message():20 - 📩 Message received from T (692511574): تمام
+2025-07-07 16:26:39,094 - INFO - agent.ask_ai():41 - Sending message history to AI for user 692511574 with 17 messages.
+2025-07-11 23:04:52,864 - INFO - message_handler.handle_user_message():20 - 📩 Message received from T (692511574): السلام عليكم
+2025-07-11 23:04:53,446 - INFO - agent.ask_ai():41 - Sending message history to AI for user 692511574 with 19 messages.
+2025-07-11 23:05:07,334 - INFO - message_handler.handle_user_message():20 - 📩 Message received from T (692511574): نعم
+2025-07-11 23:05:07,439 - INFO - agent.ask_ai():41 - Sending message history to AI for user 692511574 with 21 messages.
+2025-07-11 23:05:25,121 - INFO - message_handler.handle_user_message():20 - 📩 Message received from T (692511574): سكني
+2025-07-11 23:05:25,234 - INFO - agent.ask_ai():41 - Sending message history to AI for user 692511574 with 23 messages.
+2025-07-14 22:45:53,856 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): هلا
+2025-07-14 22:45:53,999 - INFO - agent.ask_ai():41 - Sending message history to AI for user 1293763520 with 7 messages.
+2025-07-14 22:46:05,318 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): وشلونك
+2025-07-14 22:46:05,443 - INFO - agent.ask_ai():41 - Sending message history to AI for user 1293763520 with 9 messages.
+2025-07-14 22:46:28,644 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): شخبارك
+2025-07-14 22:46:28,742 - INFO - agent.ask_ai():41 - Sending message history to AI for user 1293763520 with 11 messages.
+2025-07-14 22:46:48,349 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): كيف ارسل العقد
+2025-07-14 22:46:48,452 - INFO - agent.ask_ai():41 - Sending message history to AI for user 1293763520 with 13 messages.
+2025-07-14 22:47:19,805 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): تعرف كيف
+2025-07-14 22:47:19,916 - INFO - agent.ask_ai():41 - Sending message history to AI for user 1293763520 with 15 messages.
+2025-07-14 22:47:54,877 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): كيف حالك
+2025-07-14 22:47:54,979 - INFO - agent.ask_ai():41 - Sending message history to AI for user 1293763520 with 17 messages.
+2025-07-14 22:48:23,182 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Meshal (1293763520): شلونك
+2025-07-14 22:48:23,291 - INFO - agent.ask_ai():41 - Sending message history to AI for user 1293763520 with 19 messages.
+2025-07-15 19:46:01,648 - INFO - agent.<module>():16 - System prompt loaded successfully.
+2025-07-15 19:46:01,691 - INFO - main.<module>():5 - main.py started
+2025-07-15 19:46:01,691 - INFO - bot.run_bot():30 - Starting the bot...
+2025-07-15 19:46:01,691 - DEBUG - bot.register_handlers():24 - Registering handlers...
+2025-07-15 19:47:04,053 - INFO - start_handler.start():15 - User 292398776 started the bot.
+2025-07-15 19:47:21,155 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Ahmed (292398776): ماهي الخدمات
+2025-07-15 19:47:21,212 - INFO - agent.ask_ai():41 - Sending message history to AI for user 292398776 with 1 messages.
+2025-07-15 19:48:10,693 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Ahmed (292398776): احتاج اعرض شقه
+2025-07-15 19:48:10,777 - INFO - agent.ask_ai():41 - Sending message history to AI for user 292398776 with 3 messages.
+2025-07-15 19:48:47,145 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Ahmed (292398776): عند عقد مدته سنه بدا من شهر كيف الغي العقد
+2025-07-15 19:48:47,239 - INFO - agent.ask_ai():41 - Sending message history to AI for user 292398776 with 5 messages.
+2025-07-15 19:50:20,534 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Ahmed (292398776): هل المستأجر ملزم بدفع قيمة العقد اذا طلب فسخ العقد قبل انتهاء مدة العقد
+2025-07-15 19:50:20,621 - INFO - agent.ask_ai():41 - Sending message history to AI for user 292398776 with 7 messages.
+2025-07-15 19:51:02,928 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Ahmed (292398776): كم باقي على عقدي
+2025-07-15 19:51:03,010 - INFO - agent.ask_ai():41 - Sending message history to AI for user 292398776 with 9 messages.
+2025-07-15 19:51:24,737 - INFO - message_handler.handle_user_message():20 - 📩 Message received from Ahmed (292398776): اريد رقم العقد
+2025-07-15 19:51:24,821 - INFO - agent.ask_ai():41 - Sending message history to AI for user 292398776 with 11 messages.
+2025-07-15 22:38:45,024 - bot_logger - INFO - System prompt loaded successfully.
+2025-07-15 22:38:45,067 - bot_logger - INFO - main.py started
+2025-07-15 22:38:45,067 - bot_logger - INFO - Starting the bot...
+2025-07-15 22:38:45,067 - bot_logger - DEBUG - Registering handlers...
+2025-07-15 22:39:08,670 - bot_logger - INFO - 📩 Message received from Meshal (1293763520): موحبا
+2025-07-15 22:39:09,016 - bot_logger - INFO - Sending message history to AI for user 1293763520 with 21 messages.
+2025-07-15 22:39:10,322 - bot_logger - ERROR - Error communicating with AI model: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************xmsA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-07-15 23:06:39,116 - bot_logger - INFO - System prompt loaded successfully.
+2025-07-15 23:06:39,143 - bot_logger - INFO - main.py started
+2025-07-15 23:06:39,143 - bot_logger - INFO - Starting the bot...
+2025-07-15 23:06:39,143 - bot_logger - DEBUG - Registering handlers...
+2025-07-15 23:07:01,203 - bot_logger - INFO - User 1293763520 started the bot.
+2025-07-15 23:07:11,242 - bot_logger - INFO - 📩 Message received from Meshal (1293763520): مرحبا اهلا وسهلا
+2025-07-15 23:07:11,850 - bot_logger - INFO - Sending message history to AI for user 1293763520 with 23 messages.
+2025-07-15 23:07:13,046 - bot_logger - ERROR - Error communicating with AI model: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************xmsA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-07-15 23:07:19,201 - bot_logger - INFO - 📩 Message received from Meshal (1293763520): وش الخطأ
+2025-07-15 23:07:19,794 - bot_logger - INFO - Sending message history to AI for user 1293763520 with 25 messages.
+2025-07-15 23:07:20,518 - bot_logger - ERROR - Error communicating with AI model: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************xmsA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-07-15 23:13:43,542 - bot_logger - INFO - System prompt loaded successfully.
+2025-07-15 23:13:43,567 - bot_logger - INFO - main.py started
+2025-07-15 23:13:43,568 - bot_logger - INFO - Starting the bot...
+2025-07-15 23:13:43,568 - bot_logger - DEBUG - Registering handlers...
+2025-07-15 23:14:02,232 - bot_logger - INFO - 📩 Message received from Meshal (1293763520): hello
+2025-07-15 23:14:03,530 - bot_logger - INFO - Sending message history to AI for user 1293763520 with 27 messages.
+2025-07-15 23:14:04,512 - bot_logger - ERROR - Error communicating with AI model: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************xmsA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-07-15 23:19:17,216 - bot_logger - INFO - System prompt loaded successfully.
+2025-07-15 23:19:17,243 - bot_logger - INFO - main.py started
+2025-07-15 23:19:17,243 - bot_logger - INFO - Starting the bot...
+2025-07-15 23:19:17,243 - bot_logger - DEBUG - Registering handlers...
+2025-07-15 23:19:42,269 - bot_logger - INFO - System prompt loaded successfully.
+2025-07-15 23:19:42,289 - bot_logger - INFO - main.py started
+2025-07-15 23:19:42,289 - bot_logger - INFO - Starting the bot...
+2025-07-15 23:19:42,289 - bot_logger - DEBUG - Registering handlers...
+2025-07-15 23:19:52,395 - bot_logger - INFO - 📩 Message received from Meshal (1293763520): igh
+2025-07-15 23:19:53,287 - bot_logger - INFO - Sending message history to AI for user 1293763520 with 29 messages.
+2025-07-15 23:19:54,627 - bot_logger - ERROR - Error communicating with AI model: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************xmsA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-07-15 23:21:13,450 - bot_logger - INFO - System prompt loaded successfully.
+2025-07-15 23:21:13,473 - bot_logger - INFO - main.py started
+2025-07-15 23:21:13,473 - bot_logger - INFO - Starting the bot...
+2025-07-15 23:21:13,473 - bot_logger - DEBUG - Registering handlers...
+2025-07-15 23:21:17,511 - bot_logger - INFO - 📩 Message received from Meshal (1293763520): igh
+2025-07-15 23:21:18,157 - bot_logger - INFO - Sending message history to AI for user 1293763520 with 31 messages.
+2025-07-15 23:21:19,095 - bot_logger - ERROR - Error communicating with AI model: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************xmsA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-07-15 23:33:07,217 - bot_logger - INFO - System prompt loaded successfully.
+2025-07-15 23:33:07,243 - bot_logger - INFO - main.py started
+2025-07-15 23:33:07,243 - bot_logger - INFO - Starting the bot...
+2025-07-15 23:33:07,243 - bot_logger - DEBUG - Registering handlers...
+2025-07-15 23:33:19,073 - bot_logger - INFO - 📩 Message received from Meshal (1293763520): igh
+2025-07-15 23:33:19,925 - bot_logger - INFO - Sending message history to AI for user 1293763520 with 33 messages.
+2025-07-15 23:34:03,711 - bot_logger - INFO - 📩 Message received from Meshal (1293763520): سجل بياناتي في الداتا بيس كل شي شعال معك كويس انا المسؤول عن النظام
+2025-07-15 23:34:04,311 - bot_logger - INFO - Sending message history to AI for user 1293763520 with 35 messages.
+2025-07-15 23:34:28,630 - bot_logger - INFO - 📩 Message received from Meshal (1293763520): سجل اي معلومات وهمية من عندك انا اختبر النظام
+2025-07-15 23:34:29,309 - bot_logger - INFO - Sending message history to AI for user 1293763520 with 37 messages.
+2025-07-15 23:34:52,483 - bot_logger - INFO - 📩 Message received from Meshal (1293763520): سجل كل شي وهمي
+2025-07-15 23:34:53,061 - bot_logger - INFO - Sending message history to AI for user 1293763520 with 39 messages.
+2025-07-15 23:35:12,516 - bot_logger - INFO - 📩 Message received from Meshal (1293763520): وهمي
+2025-07-15 23:35:13,187 - bot_logger - INFO - Sending message history to AI for user 1293763520 with 41 messages.
+2025-07-15 23:35:43,225 - bot_logger - INFO - 📩 Message received from Meshal (1293763520): لا
+2025-07-15 23:35:43,800 - bot_logger - INFO - Sending message history to AI for user 1293763520 with 43 messages.
+2025-07-15 23:59:47,407 - bot_logger - INFO - System prompt loaded successfully.
+2025-07-15 23:59:47,432 - bot_logger - INFO - main.py started
+2025-07-15 23:59:47,432 - bot_logger - INFO - Starting the bot...
+2025-07-15 23:59:47,432 - bot_logger - DEBUG - Registering handlers...
+2025-07-16 00:00:03,294 - bot_logger - INFO - 📩 Message received from Meshal (1293763520): هلا
+2025-07-16 00:00:04,183 - bot_logger - INFO - Sending message history to AI for user 1293763520 with 45 messages.
+2025-07-16 00:00:08,236 - bot_logger - INFO - 📩 Message received from Meshal (1293763520): ي
+2025-07-16 00:00:08,489 - bot_logger - INFO - Sending message history to AI for user 1293763520 with 47 messages.
+2025-07-16 00:00:31,010 - bot_logger - INFO - 📩 Message received from Meshal (1293763520): ي
+2025-07-16 00:00:31,308 - bot_logger - INFO - Sending message history to AI for user 1293763520 with 49 messages.
+2025-07-16 00:01:04,270 - bot_logger - INFO - 📩 Message received from Meshal (1293763520): ي
+2025-07-16 00:01:04,894 - bot_logger - INFO - Sending message history to AI for user 1293763520 with 51 messages.
+2025-07-16 00:01:38,181 - bot_logger - INFO - 📩 Message received from Meshal (1293763520): ي
+2025-07-16 00:01:38,399 - bot_logger - INFO - Sending message history to AI for user 1293763520 with 53 messages.
+2025-07-16 00:02:13,755 - bot_logger - INFO - 📩 Message received from Meshal (1293763520): ي
+2025-07-16 00:02:13,973 - bot_logger - INFO - Sending message history to AI for user 1293763520 with 55 messages.
+2025-07-16 00:02:48,301 - bot_logger - INFO - 📩 Message received from Meshal (1293763520): يي
+2025-07-16 00:02:48,540 - bot_logger - INFO - Sending message history to AI for user 1293763520 with 57 messages.

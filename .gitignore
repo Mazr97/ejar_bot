@@ -3,4 +3,4 @@ venv/
 env/
 .env
 __pycache__/
-logs/log.log
+logs/bot.log

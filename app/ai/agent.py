@@ -1,129 +1,124 @@
 import os
 import json
+import asyncio
 from dotenv import load_dotenv
 from openai import OpenAI
 from config.logger import logger
 from app.db.user_data import get_user_summary, get_user_profile
 
-# Load environment variables
+# ── Load environment ───────────────────────────────────────────────────────────
 load_dotenv()
+api_key    = os.getenv("AI_API_KEY")
+model_name = "gpt-4o"
+if not api_key:
+    logger.error("❌ AI_API_KEY is missing in environment variables.")
+    raise ValueError("AI_API_KEY is required in .env")
+ai_client = OpenAI(api_key=api_key)
 
-print("MY OPENAI KEY =", os.getenv("AI_API_KEY"))
-
-# Load the system prompt from file
+# ── Load system prompt ─────────────────────────────────────────────────────────
+prompt_path = os.path.join(os.path.dirname(__file__), "prompt.txt")
 try:
-    prompt_path = os.path.join(os.path.dirname(__file__), "prompt.txt")
     with open(prompt_path, "r", encoding="utf-8") as f:
         system_prompt = f.read()
-    logger.info("System prompt loaded successfully.")
+    logger.info("✅ System prompt loaded.")
 except FileNotFoundError as e:
-    logger.error(f"System prompt file not found: {e}")
-    raise FileNotFoundError("The system prompt file (app/ai/prompt.txt) is missing.")
+    logger.error(f"❌ System prompt file not found: {e}")
+    raise FileNotFoundError("The system prompt file (prompt.txt) is missing.")
 
-# Load AI config
-api_key = os.getenv("AI_API_KEY")
-provider = os.getenv("AI_PROVIDER", "openai")
-model_name = os.getenv("AI_MODEL", "gpt-4o")
-
-if not api_key:
-    logger.error("AI_API_KEY is missing from environment variables.")
-    raise ValueError("AI_API_KEY is required.")
-
-# Initialize client
-if provider == "openai":
-    ai_client = OpenAI(api_key=api_key)
-elif provider == "anthropic":
-    from anthropic import Anthropic
-    ai_client = Anthropic(api_key=api_key)
-else:
-    raise ValueError(f"Unsupported AI provider: {provider}")
-
-
-# Unified function
+# ── Async AI caller with history trimming ──────────────────────────────────────
 async def ask_ai(
     user_id: int,
     message_history: list,
     pending_messages_text: str = None
 ) -> dict:
-    logger.info(f"Sending message history to AI for user {user_id} with {len(message_history)} messages.")
-
+    """
+    Send a chat completion to OpenAI, trimming history to avoid over-size errors.
+    """
+    logger.info(f"🤖 ask_ai → user {user_id}, history length={len(message_history)}")
     try:
-        user_summary = get_user_summary(user_id)
-        user_profile = get_user_profile(user_id)
+        # Fetch summary/profile
+        user_summary = get_user_summary(user_id) or ""
+        user_profile = get_user_profile(user_id) or {}
 
-        # Combine system prompt with context
+        # Build system prompt
         full_prompt = system_prompt
         if user_summary:
             full_prompt += f"\n\n# USER SUMMARY:\n{user_summary}"
         if user_profile:
-            full_prompt += f"\n\n# USER PROFILE:\n{json.dumps(user_profile, ensure_ascii=False, indent=2)}"
+            profile_json = json.dumps(user_profile, ensure_ascii=False, indent=2)
+            full_prompt += f"\n\n# USER PROFILE:\n{profile_json}"
 
-        # Build messages list
-        messages = []
-        messages.append({"role": "system", "content": full_prompt})
-
-        # If there are pending messages, inform the AI
-        if pending_messages_text:
-            messages.append({
-                "role": "user",
-                "content": pending_messages_text
-            })
-
-        # Add actual chat history
-        messages.extend(message_history)
-
-        # Call the chosen model
-        if provider == "openai":
-            response = ai_client.chat.completions.create(
-                model=model_name,
-                messages=messages,
-                max_tokens=2048,
-            )
-            full_text = response.choices[0].message.content or ""
-        elif provider == "anthropic":
-            response = ai_client.messages.create(
-                model=model_name,
-                system=full_prompt,
-                messages=message_history,
-                max_tokens=2048,
-                stream=False,
-            )
-            full_text = response.content[0].text or ""
+        # Trim history to last N messages
+        MAX_HISTORY = 20
+        if len(message_history) > MAX_HISTORY:
+            trimmed = message_history[-MAX_HISTORY:]
+            logger.info(f"✂️ Trimming history: kept last {MAX_HISTORY} messages")
         else:
-            raise ValueError(f"Unsupported AI provider: {provider}")
+            trimmed = message_history
 
-        # Check if a PDF should be generated
-        pdf_flag = "[SEND_PDF]" in full_text
-        clean_text = full_text.replace("[SEND_PDF]", "").strip()
+        # Compose messages
+        messages = [{"role": "system", "content": full_prompt}]
+        if pending_messages_text:
+            messages.append({"role": "user", "content": pending_messages_text})
+        messages.extend(trimmed)
 
-        # Attempt to extract JSON from the message
-        pdf_content = None
+        # Call OpenAI
+        response = ai_client.chat.completions.create(
+            model=model_name,
+            messages=messages,
+            max_tokens=1024
+        )
+        raw = response.choices[0].message.content or ""
+        logger.debug(f"AI raw preview: {raw[:200]!r}")
+
+        # Handle [SEND_PDF] tag + embedded JSON
+        pdf_flag   = "[SEND_PDF]" in raw
+        clean_text = raw.replace("[SEND_PDF]", "").strip()
+
+        pdf_content     = None
         profile_updates = None
-        try:
-            start = clean_text.find("{")
-            end = clean_text.rfind("}")
-            if start != -1 and end != -1:
-                json_blob = clean_text[start:end + 1]
-                parsed = json.loads(json_blob)
+        start = clean_text.find("{")
+        end   = clean_text.rfind("}")
+        if start != -1 and end != -1:
+            try:
+                blob   = clean_text[start : end + 1]
+                parsed = json.loads(blob)
                 if isinstance(parsed, dict):
-                    pdf_content = parsed
+                    pdf_content     = parsed
                     profile_updates = parsed.get("profile_updates")
                 clean_text = clean_text[:start].strip()
-        except Exception as e:
-            logger.warning(f"Failed to parse JSON content: {e}")
+            except Exception as e:
+                logger.warning(f"⚠️ Failed to parse JSON blob: {e}")
 
         return {
-            "reply": clean_text,
-            "pdf_request": pdf_flag,
-            "pdf_content": pdf_content,
+            "reply":           clean_text,
+            "pdf_request":     pdf_flag,
+            "pdf_content":     pdf_content,
             "profile_updates": profile_updates,
         }
 
     except Exception as e:
-        logger.error(f"Error communicating with AI model: {e}")
+        logger.error(f"❌ OpenAI error for user {user_id}: {e}")
         return {
-            "reply": "عذرًا، حدث خطأ أثناء محاولة الرد من الذكاء الاصطناعي.",
-            "pdf_request": False,
-            "pdf_content": None,
+            "reply":           "عذرًا، حدث خطأ أثناء محاولة الرد من الذكاء الاصطناعي.",
+            "pdf_request":     False,
+            "pdf_content":     None,
             "profile_updates": None,
         }
+
+# ── Sync wrapper for run_in_executor ─────────────────────────────────────────
+def ask_ai_sync(
+    user_id: int,
+    message_history: list,
+    pending_messages_text: str = None
+) -> dict:
+    """
+    Synchronous wrapper around ask_ai(), safe to call in a threadpool.
+    """
+    loop = asyncio.new_event_loop()
+    try:
+        return loop.run_until_complete(
+            ask_ai(user_id, message_history, pending_messages_text)
+        )
+    finally:
+        loop.close()

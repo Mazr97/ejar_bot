@@ -25,15 +25,12 @@ except FileNotFoundError as e:
     logger.error(f"❌ System prompt file not found: {e}")
     raise FileNotFoundError("The system prompt file (prompt.txt) is missing.")
 
-# ── Async AI caller with history trimming ──────────────────────────────────────
+# ── Async AI caller with streaming ─────────────────────────────────────────────
 async def ask_ai(
     user_id: int,
     message_history: list,
     pending_messages_text: str = None
 ) -> dict:
-    """
-    Send a chat completion to OpenAI, trimming history to avoid over-size errors.
-    """
     logger.info(f"🤖 ask_ai → user {user_id}, history length={len(message_history)}")
     try:
         # Fetch summary/profile
@@ -50,11 +47,7 @@ async def ask_ai(
 
         # Trim history to last N messages
         MAX_HISTORY = 20
-        if len(message_history) > MAX_HISTORY:
-            trimmed = message_history[-MAX_HISTORY:]
-            logger.info(f"✂️ Trimming history: kept last {MAX_HISTORY} messages")
-        else:
-            trimmed = message_history
+        trimmed = message_history[-MAX_HISTORY:] if len(message_history) > MAX_HISTORY else message_history
 
         # Compose messages
         messages = [{"role": "system", "content": full_prompt}]
@@ -62,13 +55,21 @@ async def ask_ai(
             messages.append({"role": "user", "content": pending_messages_text})
         messages.extend(trimmed)
 
-        # Call OpenAI
-        response = ai_client.chat.completions.create(
+        # Streaming completion
+        stream = ai_client.chat.completions.create(
             model=model_name,
             messages=messages,
-            max_tokens=1024
+            stream=True,
+            max_tokens=1024,
         )
-        raw = response.choices[0].message.content or ""
+
+        raw_chunks = []
+        for chunk in stream:
+            delta = chunk.choices[0].delta.content
+            if delta:
+                raw_chunks.append(delta)
+
+        raw = "".join(raw_chunks)
         logger.debug(f"AI raw preview: {raw[:200]!r}")
 
         # Handle [SEND_PDF] tag + embedded JSON

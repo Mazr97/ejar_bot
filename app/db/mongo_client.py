@@ -15,4 +15,6 @@ db = client["ejar_bot"]  # or "sukoon_db" if that's your DB
 # Collections
 users_collection = db["users"]
 summaries_collection = db["summaries"]
-sessions_collection = db["sessions"]  # optional
+sessions_collection = db["sessions"]  
+
+training_data = db["training_data"]

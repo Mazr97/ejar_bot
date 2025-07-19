@@ -1,5 +1,3 @@
-# app/handlers/message_handler.py
-
 import asyncio
 from telegram import Update
 from telegram.constants import ChatAction
@@ -14,7 +12,7 @@ from app.db.user_data import (
     append_message_to_current_session,
     mark_session_completed
 )
-from app.ai.agent import ask_ai_sync  # synchronous wrapper
+from app.ai.agent import ask_ai_sync  # updated sync wrapper with streaming
 
 # ── Debounce setup ─────────────────────────────────────────────────────────────
 DEBOUNCE_SECONDS = 1.0
@@ -123,8 +121,10 @@ async def process_user_queue(user_id: int, context: ContextTypes.DEFAULT_TYPE):
                 user_id, {"role": "assistant", "content": reply}
             )
 
-            # — send the entire reply in one message —
-            await context.bot.send_message(chat_id=chat_id, text=reply)
+            # — split and send long reply —
+            CHUNK_SIZE = 4000
+            for i in range(0, len(reply), CHUNK_SIZE):
+                await context.bot.send_message(chat_id=chat_id, text=reply[i:i+CHUNK_SIZE])
 
             # — stop the typing loop —
             stop_evt.set()

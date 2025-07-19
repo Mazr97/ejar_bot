@@ -1,0 +1,72 @@
+2025-07-19 21:14:53,129 - bot_logger - INFO - ✅ System prompt loaded.
+2025-07-19 21:14:53,138 - bot_logger - INFO - main.py started
+2025-07-19 21:14:53,138 - bot_logger - INFO - Starting the bot...
+2025-07-19 21:14:53,138 - bot_logger - DEBUG - Registering handlers...
+2025-07-19 21:15:24,582 - bot_logger - INFO - User 1293763520 started the bot.
+2025-07-19 21:15:35,326 - bot_logger - INFO - 🔄 Debounced for user 1293763520: 1 messages combined
+2025-07-19 21:15:35,326 - bot_logger - DEBUG - 🆕 Created new queue for user 1293763520
+2025-07-19 21:15:35,326 - bot_logger - INFO - 📥 Queued message for user 1293763520: السلام عليكم ابي اسوي عد
+2025-07-19 21:15:35,327 - bot_logger - DEBUG - Queue size for user 1293763520: 1
+2025-07-19 21:15:35,327 - bot_logger - DEBUG - 👀 Worker running for user 1293763520: False
+2025-07-19 21:15:35,327 - bot_logger - DEBUG - 🔧 Set worker task for user 1293763520
+2025-07-19 21:15:35,327 - bot_logger - DEBUG - ⏳ Pending messages for user 1293763520: True
+2025-07-19 21:15:35,327 - bot_logger - INFO - 📤 Dequeued message for user 1293763520
+2025-07-19 21:15:35,503 - bot_logger - INFO - 🤖 ask_ai → user 1293763520, history length=272
+2025-07-19 21:15:36,642 - bot_logger - INFO - 🔄 Debounced for user 1293763520: 1 messages combined
+2025-07-19 21:15:36,642 - bot_logger - INFO - 📥 Queued message for user 1293763520: عقد
+2025-07-19 21:15:36,643 - bot_logger - DEBUG - Queue size for user 1293763520: 1
+2025-07-19 21:15:36,643 - bot_logger - DEBUG - 👀 Worker running for user 1293763520: True
+2025-07-19 21:15:39,596 - bot_logger - INFO - 🔄 Debounced for user 1293763520: 1 messages combined
+2025-07-19 21:15:39,597 - bot_logger - INFO - 📥 Queued message for user 1293763520: عقد الكتروني
+2025-07-19 21:15:39,597 - bot_logger - DEBUG - Queue size for user 1293763520: 2
+2025-07-19 21:15:39,597 - bot_logger - DEBUG - 👀 Worker running for user 1293763520: True
+2025-07-19 21:15:40,680 - bot_logger - DEBUG - AI raw preview: 'وعليكم السلام! تبي تسوي عقد إيجار سكني، تجاري، أو عقد بالباطن؟ عشان نبدأ في الإجراءات المناسبة لك.'
+2025-07-19 21:15:42,286 - bot_logger - DEBUG - ✅ Marked message as done for user 1293763520
+2025-07-19 21:15:42,286 - bot_logger - DEBUG - ⏳ Pending messages for user 1293763520: True
+2025-07-19 21:15:42,286 - bot_logger - INFO - 📤 Dequeued message for user 1293763520
+2025-07-19 21:15:42,452 - bot_logger - INFO - 🤖 ask_ai → user 1293763520, history length=274
+2025-07-19 21:15:48,493 - bot_logger - INFO - 🔄 Debounced for user 1293763520: 1 messages combined
+2025-07-19 21:15:48,494 - bot_logger - INFO - 📥 Queued message for user 1293763520: سكني
+2025-07-19 21:15:48,494 - bot_logger - DEBUG - Queue size for user 1293763520: 2
+2025-07-19 21:15:48,494 - bot_logger - DEBUG - 👀 Worker running for user 1293763520: True
+2025-07-19 21:15:58,599 - bot_logger - INFO - 🔄 Debounced for user 1293763520: 1 messages combined
+2025-07-19 21:15:58,599 - bot_logger - INFO - 📥 Queued message for user 1293763520: وش تحتاج المعلومات
+2025-07-19 21:15:58,599 - bot_logger - DEBUG - Queue size for user 1293763520: 3
+2025-07-19 21:15:58,600 - bot_logger - DEBUG - 👀 Worker running for user 1293763520: True
+2025-07-19 21:15:59,411 - bot_logger - DEBUG - AI raw preview: 'ممتاز! تبي العقد سكني، تجاري، أو عقد بالباطن؟ عشان نبدأ في تجهيز العقد بكل التفاصيل اللازمة.'
+2025-07-19 21:16:01,067 - bot_logger - DEBUG - ✅ Marked message as done for user 1293763520
+2025-07-19 21:16:01,068 - bot_logger - DEBUG - ⏳ Pending messages for user 1293763520: True
+2025-07-19 21:16:01,068 - bot_logger - INFO - 📤 Dequeued message for user 1293763520
+2025-07-19 21:16:01,231 - bot_logger - INFO - 🤖 ask_ai → user 1293763520, history length=276
+2025-07-19 21:16:18,682 - bot_logger - INFO - 🔄 Debounced for user 1293763520: 1 messages combined
+2025-07-19 21:16:18,683 - bot_logger - INFO - 📥 Queued message for user 1293763520: لا سكني قلت لك
+2025-07-19 21:16:18,683 - bot_logger - DEBUG - Queue size for user 1293763520: 3
+2025-07-19 21:16:18,684 - bot_logger - DEBUG - 👀 Worker running for user 1293763520: True
+2025-07-19 21:16:23,291 - bot_logger - INFO - 🔄 Debounced for user 1293763520: 1 messages combined
+2025-07-19 21:16:23,292 - bot_logger - INFO - 📥 Queued message for user 1293763520: كم الرسوم
+2025-07-19 21:16:23,292 - bot_logger - DEBUG - Queue size for user 1293763520: 4
+2025-07-19 21:16:23,292 - bot_logger - DEBUG - 👀 Worker running for user 1293763520: True
+2025-07-19 21:16:31,664 - bot_logger - DEBUG - AI raw preview: 'أبشر! تبي العقد يكون سكني، تجاري، أو عقد بالباطن؟ عشان نقدر نكمل الإجراءات الإلكترونية بالخطوات المناسبة لك.'
+2025-07-19 21:16:32,100 - bot_logger - DEBUG - ✅ Marked message as done for user 1293763520
+2025-07-19 21:16:32,100 - bot_logger - DEBUG - ⏳ Pending messages for user 1293763520: True
+2025-07-19 21:16:32,100 - bot_logger - INFO - 📤 Dequeued message for user 1293763520
+2025-07-19 21:16:32,255 - bot_logger - INFO - 🤖 ask_ai → user 1293763520, history length=278
+2025-07-19 21:17:04,613 - bot_logger - DEBUG - AI raw preview: 'حلو! وش نوع الصك اللي عندك؟ هل هو صك إلكتروني أو سجل عقاري؟ عشان نقدر نكمل تجهيز العقد بشكل صحيح.'
+2025-07-19 21:17:05,164 - bot_logger - DEBUG - ✅ Marked message as done for user 1293763520
+2025-07-19 21:17:05,165 - bot_logger - DEBUG - ⏳ Pending messages for user 1293763520: True
+2025-07-19 21:17:05,165 - bot_logger - INFO - 📤 Dequeued message for user 1293763520
+2025-07-19 21:17:05,328 - bot_logger - INFO - 🤖 ask_ai → user 1293763520, history length=280
+2025-07-19 21:17:38,410 - bot_logger - DEBUG - AI raw preview: 'راح أحتاج منك التالي لمواصلة عملية تجهيز عقد الإيجار السكني بالصك الإلكتروني:\n\n1. صورة الصك\n2. تاريخ الإصدار\n3. رقم الصك\n4. رقم هوية المالك\n\nإذا كان عندك هذه المعلومات، ياليت تشاركها معي عشان نكمل. وإ'
+2025-07-19 21:17:38,906 - bot_logger - DEBUG - ✅ Marked message as done for user 1293763520
+2025-07-19 21:17:38,906 - bot_logger - DEBUG - ⏳ Pending messages for user 1293763520: True
+2025-07-19 21:17:38,906 - bot_logger - INFO - 📤 Dequeued message for user 1293763520
+2025-07-19 21:17:39,081 - bot_logger - INFO - 🤖 ask_ai → user 1293763520, history length=282
+2025-07-19 21:18:10,121 - bot_logger - DEBUG - AI raw preview: 'حلو! ووش نوع الصك اللي عندك؟ هل هو صك إلكتروني أو سجل عقاري؟ عشان نكمل تجهيز العقد.'
+2025-07-19 21:18:11,768 - bot_logger - DEBUG - ✅ Marked message as done for user 1293763520
+2025-07-19 21:18:11,769 - bot_logger - DEBUG - ⏳ Pending messages for user 1293763520: True
+2025-07-19 21:18:11,769 - bot_logger - INFO - 📤 Dequeued message for user 1293763520
+2025-07-19 21:18:11,928 - bot_logger - INFO - 🤖 ask_ai → user 1293763520, history length=284
+2025-07-19 21:18:46,101 - bot_logger - DEBUG - AI raw preview: 'عادةً تسجيل وتوثيق عقد الإيجار عبر منصة إيجار يتطلب دفع رسوم معينة، وغالبًا يتحمل المؤجر هذه الرسوم. لكن الأفضل تتأكد من منصة إيجار على الرسوم الحاليّة لأنها قد تختلف حسب تفاصيل العقد ونوعه. \n\nإذا تبي'
+2025-07-19 21:18:47,769 - bot_logger - DEBUG - ✅ Marked message as done for user 1293763520
+2025-07-19 21:18:47,770 - bot_logger - DEBUG - ⏳ Pending messages for user 1293763520: False
+2025-07-19 21:18:47,770 - bot_logger - DEBUG - 🧹 Cleared worker task for user 1293763520

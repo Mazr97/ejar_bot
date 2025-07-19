@@ -4,7 +4,7 @@ import asyncio
 from dotenv import load_dotenv
 from openai import OpenAI
 from config.logger import logger
-from app.db.user_data import get_user_summary, get_user_profile
+from app.db.user_data import get_partial_summary, get_user_profile
 
 # ── Load environment ───────────────────────────────────────────────────────────
 load_dotenv()
@@ -33,21 +33,23 @@ async def ask_ai(
 ) -> dict:
     logger.info(f"🤖 ask_ai → user {user_id}, history length={len(message_history)}")
     try:
-        # Fetch summary/profile
-        user_summary = get_user_summary(user_id) or ""
+       # Prepare the full prompt
+        partial_summary = get_partial_summary(user_id) or ""
         user_profile = get_user_profile(user_id) or {}
 
-        # Build system prompt
         full_prompt = system_prompt
-        if user_summary:
-            full_prompt += f"\n\n# USER SUMMARY:\n{user_summary}"
+        if partial_summary:
+            full_prompt += f"\n\n# USER SUMMARY:\n{partial_summary}"
         if user_profile:
             profile_json = json.dumps(user_profile, ensure_ascii=False, indent=2)
             full_prompt += f"\n\n# USER PROFILE:\n{profile_json}"
 
+
+
         # Trim history to last N messages
-        MAX_HISTORY = 20
-        trimmed = message_history[-MAX_HISTORY:] if len(message_history) > MAX_HISTORY else message_history
+        RECENT_MESSAGES = 3
+        trimmed = message_history[-RECENT_MESSAGES:] if len(message_history) > RECENT_MESSAGES else message_history
+
 
         # Compose messages
         messages = [{"role": "system", "content": full_prompt}]

@@ -2,15 +2,15 @@ import asyncio
 from telegram import Update
 from telegram.constants import ChatAction
 from telegram.ext import MessageHandler, ContextTypes, filters
-
 from config import queue as user_queue
 from config.logger import logger
-
+from app.db.training_storage import store_for_training
 from app.db.user_data import (
     create_or_update_user,
     get_current_session_history,
     append_message_to_current_session,
-    mark_session_completed
+    mark_session_completed,
+    update_partial_summary
 )
 from app.ai.agent import ask_ai_sync  # updated sync wrapper with streaming
 
@@ -75,16 +75,17 @@ async def handle_user_message(update: Update, context: ContextTypes.DEFAULT_TYPE
     _debounce_tasks[user_id] = asyncio.create_task(
         _schedule_flush(user_id, chat_id, first_name, context)
     )
-
 async def process_user_queue(user_id: int, context: ContextTypes.DEFAULT_TYPE):
+    
+
     loop = asyncio.get_running_loop()
     try:
-        # Drain the queue one combined message at a time
         while user_queue.queue_has_pending_messages(user_id):
             chat_id, first_name, text = await user_queue.dequeue_message(user_id)
 
             # — start continuous typing indicator —
             stop_evt = asyncio.Event()
+
             async def continuous_typing():
                 while not stop_evt.is_set():
                     await context.bot.send_chat_action(
@@ -92,12 +93,43 @@ async def process_user_queue(user_id: int, context: ContextTypes.DEFAULT_TYPE):
                         action=ChatAction.TYPING
                     )
                     await asyncio.sleep(1.0)
+
             typing_task = asyncio.create_task(continuous_typing())
 
             # — record user & build history —
             create_or_update_user(user_id=user_id, first_name=first_name)
             history = get_current_session_history(user_id)
             history.append({"role": "user", "content": text})
+
+            # — 🔁 Update partial summary every 10 user messages —
+            user_message_count = len([
+                msg for msg in history if msg.get("role") == "user"
+            ])
+
+            if user_message_count % 10 == 0:
+                summary_prompt = "لخّص المحادثة التالية بإيجاز:\n\n"
+                for msg in history[-20:]:  # last 20 messages
+                    role = "مستخدم" if msg["role"] == "user" else "مساعد"
+                    summary_prompt += f"{role}: {msg['content']}\n"
+
+                summary_response = await loop.run_in_executor(
+                    None,
+                    lambda: ask_ai_sync(
+                        user_id=user_id,
+                        message_history=[
+                            {"role": "user", "content": summary_prompt}
+                        ]
+                    )
+                )
+
+                # — update partial summary in MongoDB —
+                partial_summary = summary_response.get("reply", "").strip()
+                # — ensure it's not empty —
+                if partial_summary:
+                    update_partial_summary(user_id, partial_summary)
+                    logger.info(f"✅ Updated partial summary for user {user_id}")
+                else:
+                    logger.warning(f"⚠️ Empty summary returned for user {user_id}")
 
             # — call the blocking AI in an executor —
             response = await loop.run_in_executor(
@@ -109,22 +141,21 @@ async def process_user_queue(user_id: int, context: ContextTypes.DEFAULT_TYPE):
             )
 
             # — extract reply & flags —
-            reply       = response.get("reply", "عذراً، لم أفهم طلبك.")
+            reply = response.get("reply", "عذراً، لم أفهم طلبك.")
             session_end = response.get("session_end", False)
-            summary     = response.get("summary")
+            summary = response.get("summary")
+
+            # store the exchange for future training
+            store_for_training(prompt=text, completion=reply)
 
             # — log both sides in Mongo —
-            append_message_to_current_session(
-                user_id, {"role": "user", "content": text}
-            )
-            append_message_to_current_session(
-                user_id, {"role": "assistant", "content": reply}
-            )
+            append_message_to_current_session(user_id, {"role": "user", "content": text})
+            append_message_to_current_session(user_id, {"role": "assistant", "content": reply})
 
             # — split and send long reply —
-            CHUNK_SIZE = 4000
+            CHUNK_SIZE = 1000
             for i in range(0, len(reply), CHUNK_SIZE):
-                await context.bot.send_message(chat_id=chat_id, text=reply[i:i+CHUNK_SIZE])
+                await context.bot.send_message(chat_id=chat_id, text=reply[i:i + CHUNK_SIZE])
 
             # — stop the typing loop —
             stop_evt.set()

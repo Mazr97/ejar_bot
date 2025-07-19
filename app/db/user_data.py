@@ -29,19 +29,31 @@ def create_or_update_user(user_id: int, first_name: str = None, national_id: str
     )
 
 
-def get_user_summary(user_id: int):
-    """Retrieve user's latest AI summary."""
-    doc = summaries_collection.find_one({"user_id": user_id})
-    return doc["summary"] if doc and "summary" in doc else None
+def get_partial_summary(user_id: int) -> str:
+    """Retrieve the current session's partial summary."""
+    session_id = get_current_session_id(user_id)
+    if not session_id:
+        return None
 
+    session = sessions_collection.find_one({"_id": session_id})
+    return session.get("partial_summary")
 
-def save_user_summary(user_id: int, summary: str):
-    """Save or update user's summary."""
-    summaries_collection.update_one(
-        {"user_id": user_id},
-        {"$set": {"summary": summary, "updated_at": datetime.utcnow()}},
-        upsert=True
+def update_partial_summary(user_id: int, summary: str):
+    """Update the partial summary for the current session."""
+    session_id = get_current_session_id(user_id)
+    if not session_id:
+        return
+
+    sessions_collection.update_one(
+        {"_id": session_id},
+        {"$set": {
+            "partial_summary": summary,
+            "partial_summary_updated_at": datetime.utcnow()
+        }}
     )
+
+
+
 
 
 def get_user_profile(user_id: int):
@@ -112,12 +124,18 @@ def mark_session_completed(user_id: int, summary: str = None):
     if not session_id:
         return
 
+    update_fields = {
+        "status": "completed",
+        "end_time": datetime.utcnow()
+    }
+
+    if summary:
+        update_fields["final_summary"] = summary
+        update_fields["final_summary_created_at"] = datetime.utcnow()
+
     sessions_collection.update_one(
         {"_id": session_id},
-        {"$set": {
-            "status": "completed",
-            "end_time": datetime.utcnow()
-        }}
+        {"$set": update_fields}
     )
 
     users_collection.update_one(
@@ -125,8 +143,6 @@ def mark_session_completed(user_id: int, summary: str = None):
         {"$unset": {"current_session_id": ""}}
     )
 
-    if summary:
-        save_user_summary(user_id, summary)
 
 
 def clear_current_session(user_id: int):
@@ -158,3 +174,11 @@ def delete_user_data(user_id: int):
 
     # Remove user
     users_collection.delete_one({"user_id": user_id})
+def get_final_summary(user_id: int) -> str:
+    """Get the final summary if session is completed."""
+    session_id = get_current_session_id(user_id)
+    if not session_id:
+        return None
+
+    session = sessions_collection.find_one({"_id": session_id})
+    return session.get("final_summary")
